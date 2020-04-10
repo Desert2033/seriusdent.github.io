@@ -1,0 +1,6 @@
+.content-fade-enter-active, .content-fade-leave-active {
+  transition: opacity .5s;
+}
+.content-fade-enter, .content-fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+  opacity: 0;
+}
