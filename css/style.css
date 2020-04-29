@@ -381,14 +381,30 @@ h1 .h1-color-edit {
   margin: 8px 0 27px 0;
 }
 
+hr {
+    width: 38px;
+    border: none;
+    background-color: rgba(51, 51, 51, 0.22); 
+    color: rgba(51, 51, 51, 0.22); 
+    height: 2px; 
+}
+
 .info-method {
   font-family: 'Bebas Neue', sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: bolder;
   font-size: 28px;
   line-height: 28px;
   /* identical to box height */
   color: #333333;
+}
+
+.read-next-mini{
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 13px;
+    color: #C73F3A;
 }
 
 .slider {
@@ -1046,3 +1062,202 @@ footer {
   color: #FFFFFF;
   opacity: 0.8;
 }
+
+/*   White teeth page   */
+
+.white-teeth-page {
+  position: relative;
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+}
+
+.white-teeth-imageBlock,
+.sponsor-imageBlock {
+  position: relative;
+}
+
+.bg-color-white-teeth {
+  width: 70%;
+  height: 65%;
+  background: #00D3BE;
+}
+
+.bg-white-teeth {
+  position: absolute;
+  top: 100px;
+  right: 270px;
+  /*max-width: 560px;*/
+  width: 68%;
+  /*max-height: 642px;*/
+  height: 70%;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.14);
+}
+
+.picture-white-teeth {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dotts-white-teeth {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  right: 2px;
+  width: 311px;
+  height: 616px;
+  background: url(../img/dotts-about-us.svg) no-repeat;
+}
+
+.white-teeth-container {
+  padding-top: 20px;
+}
+
+.white-teeth-block span,
+.partners-block span,
+.contacts-block span,
+.team-block span,
+.schedule-block>span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.white-teeth-color-blue,
+.contacts-color-blue {
+  color: #00D3BE;
+}
+
+.white-teeth-block p,
+.sponsor-container p {
+  max-width: 604px;
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  color: #8D8D8D;
+}
+
+.read-white-teeth {
+  margin-top: 70px;
+}
+
+/* All services item */
+
+.services-item-page {
+  position: relative;
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 20px;
+}
+
+.services-item-imageBlock,
+.sponsor-imageBlock {
+  position: relative;
+}
+
+.bg-color-services-item {
+  width: 70%;
+  height: 65%;
+  background: #00D3BE;
+}
+
+.bg-services-item {
+  position: absolute;
+  top: 100px;
+  right: 270px;
+  /*max-width: 560px;*/
+  width: 68%;
+  /*max-height: 642px;*/
+  height: 70%;
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.14);
+}
+
+.picture-services-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dotts-services-item {
+  position: absolute;
+  z-index: -1;
+  top: 50px;
+  right: 2px;
+  width: 311px;
+  height: 616px;
+  background: url(../img/dotts-about-us.svg) no-repeat;
+}
+
+.services-item-container {
+  padding-top: 20px;
+}
+
+.services-item-block span,
+.partners-block span,
+.contacts-block span,
+.team-block span,
+.schedule-block>span {
+  font-family: 'Bebas Neue', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+}
+
+.services-item-color-blue,
+.contacts-color-blue {
+  color: #00D3BE;
+}
+
+.services-item-block p,
+.sponsor-container p {
+  max-width: 604px;
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 35px;
+  color: #8D8D8D;
+}
+
+.read-white-teeth {
+  margin-top: 70px;
+}
+
+.kids-font{
+  max-width: 604px;
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px !important;
+  line-height: 35px;
+  color: #8D8D8D;
+} 
+
+.orto-font{
+  max-width: 604px;
+  margin-top: 46px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px !important;
+  line-height: 35px;
+  color: #8D8D8D;
+}
+
+.surgeryFace-font,
+.services-item-block li{
+  max-width: 604px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 23px !important;
+  line-height: 35px;
+  color: #8D8D8D;
+}
+

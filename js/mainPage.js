@@ -9,8 +9,16 @@ var wrapper = new Vue({
             partner: 'partner',
             services: 'services',
             team: 'team',
-            contacts: 'contacts'
+            contacts: 'contacts',
+            whiteTeeth: 'whiteTeeth',
+            sleepTeeth: 'sleepTeeth',
+            terapia: 'terapia',
+            kids: 'kids',
+            orto: 'orto',
+            surgery: 'surgery',
+            surgeryFace: 'surgeryFace',
         },
+        numberShow: false,
     }
 });
     

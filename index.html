@@ -48,10 +48,21 @@
             </div>
 
           </div>
-
+       
           <div class="emergency-help d-flex">
-            <div class="button-help">Экстренная помощь</div>
+          
+           <transition>
+           
+            <div @click="numberShow = !numberShow" v-if="!numberShow" class="button-help">Скорая помощь
+            </div>
+            
+            <div @click="numberShow = !numberShow"  v-if="numberShow" class="button-help">+38 066 125 86 31
+            </div>
+            
+            </transition>
+            
           </div>
+        
 
           <div class="social d-flex">
 
@@ -81,7 +92,6 @@
         <a @click="show = listPage.team" href="#"
          :class="{ active: show == listPage.team }">КОМАНДА</a>
         <a @click="show = listPage.contacts" href="#"
-        
         :class="{ active: show == listPage.contacts }">КОНТАКТЫ</a>
       </aside>
     </div>
@@ -127,8 +137,10 @@
               <div class="info">
 
                 <span class="info-number">01</span>
-                <div class="block-line"></div>
-                <span class="info-method">Современные решения лечения</span>
+                <hr>
+                <span class="info-method">Отбеливание зубов</span><br>
+                <a id="whiteTeeth" @click="show = listPage.whiteTeeth" href="#"
+                class="read-next-mini">читать дальше &#10144;</a>
               </div>
 
             </div>
@@ -164,7 +176,7 @@
 
               <div class="line-block-services"></div>
 
-              <p>Мы работаем с ... года и за эти годы эффективно оказали помощь тысячам пациентов, и достигли успехов во всех напрвлениях современной стоматологии и челюстно-лицевой хирургии.</p>
+              <p>Мы работаем с 2002 года и за эти годы эффективно оказали помощь тысячам пациентов, и достигли успехов во всех напрвлениях современной стоматологии и челюстно-лицевой хирургии.</p>
 
               <a href="#" class="read read-about-us">
                 <div class="arrow-href"><img src="img/arrow-read.svg" alt=""></div>
@@ -199,17 +211,17 @@
 
             <div class="sponsor-phone">
 
-              <a href="#" class="read-sponsor">
+              <a href="https://odrex.ua/" class="read-sponsor">
                 <div class="arrow-href"><img src="img/arrow-read.svg" alt=""></div>
-                <div class="read-more">ЧИТАТЬ ДАЛЬШЕ</div>
+                <div class="read-more">Перейти на сайт</div>
               </a>
 
               <div class="telephone sponsor-telephone">
 
                 <img src="img/phone-icon.svg" alt="SOS">
 
-                <a href="tel:+380(66)1258631">
-                  <span>+38 066 125 86 31</span>
+                <a href="tel:+380(48)7529366">
+                  <span>+38 048 752 93 66</span>
                 </a>
 
               </div>
@@ -237,8 +249,8 @@
                 <div class="card first-card">
                   <div class="left-colorBlock"></div>
                   <div class="info-area">
-
-                    <img src="img/sleep-icon.png" alt="Sleep" class="card-icon" width="108" height="108">
+                     
+                      <a @click="show = listPage.sleepTeeth" href="#" >  <img src="img/sleep-icon.png" alt="Sleep" class="card-icon" width="108" height="108"></a>
 
                     <p class="card-text">Лечение зубов <br> во сне</p>
 
@@ -248,8 +260,9 @@
                 <div class="card second-card">
                   <div class="left-colorBlock"></div>
                   <div class="info-area">
-
-                    <img src="img/shiny-tooth.png" alt="Sleep" class="card-icon" width="90" height="90">
+                    
+                    <a @click="show = listPage.terapia" href="#" >
+                        <img src="img/shiny-tooth.png" alt="Sleep" class="card-icon" width="90" height="90"> </a>
 
                     <p class="card-text">Терапевтическая стоматология</p>
 
@@ -263,8 +276,9 @@
                 <div class="card third-card">
                   <div class="left-colorBlock"></div>
                   <div class="info-area">
-
-                    <img src="img/baby-boy.png" alt="Sleep" class="card-icon" width="95" height="95">
+                    
+                    <a @click="show = listPage.kids" href="#">
+                    <img src="img/baby-boy.png" alt="Sleep" class="card-icon" width="95" height="95"></a>
 
                     <p class="card-text">Детская Стоматология </p>
 
@@ -274,8 +288,9 @@
                 <div class="card fourth-card">
                   <div class="left-colorBlock"></div>
                   <div class="info-area">
-
-                    <img src="img/fake-tooth.png" alt="Sleep" class="card-icon" width="87" height="87">
+                    
+                    <a @click="show = listPage.orto" href="#">
+                        <img src="img/fake-tooth.png" alt="Sleep" class="card-icon" width="87" height="87"></a>
 
                     <p class="card-text">ОРтопедическая стоматология</p>
 
@@ -289,9 +304,10 @@
                 <div class="card fifth-card inverseCard">
                   <div class="left-colorBlock inverseBlock"></div>
                   <div class="info-area">
-
-                    <img src="img/dentist-icon.png" alt="Sleep" class="card-icon" width="96" height="96">
-
+                    
+                    <a @click="show = listPage.surgery" href="#">
+                        <img src="img/dentist-icon.png" alt="Sleep" class="card-icon" width="96" height="96"></a>
+                    
                     <p class="card-text inverseCard-text">Хирургическая стоматология</p>
 
                   </div>
@@ -301,7 +317,8 @@
                   <div class="left-colorBlock inverseBlock"></div>
                   <div class="info-area">
 
-                    <img src="img/allergy-icon.png" alt="Allergy" class="card-icon" width="96" height="96">
+                   <a @click="show = listPage.surgeryFace" href="#">
+                       <img src="img/allergy-icon.png" alt="Allergy" class="card-icon" width="96" height="96"></a>
 
                     <p class="card-text inverseCard-text">Челюстно-лицевая хирургия</p>
 
@@ -366,10 +383,10 @@
 
             </div>
 
-            <div class="team-slider-status">
+           <!-- <div class="team-slider-status">
               <div class="slider-numbers">
                 <p class="number-current">1</p>
-                <span> / </span>
+                 <span> / </span> 
                 <p class="number-all">5</p>
               </div>
 
@@ -388,8 +405,9 @@
               </div>
 
 
-            </div>
-          </div>
+            </div> -->
+            
+          </div> 
 
         </div>
 
@@ -435,11 +453,11 @@
               <div class="line-block-services"></div>
 
               <div class="schedule-block-days">
-                <p>Понедельник</p><p style="color: #333333;">8:00 - 18:00</p>
-                <p>Вторник</p><p style="color: #333333;">8:00 - 18:00</p>
-                <p>Среда</p><p style="color: #333333;">8:00 - 18:00</p>
-                <p>Четверг</p><p style="color: #333333;">8:00 - 18:00</p>
-                <p>Пятница</p><p style="color: #333333;">8:00 - 18:00</p>
+                <p>Понедельник</p><p style="color: #333333;">9:00 - 18:00</p>
+                <p>Вторник</p><p style="color: #333333;">9:00 - 18:00</p>
+                <p>Среда</p><p style="color: #333333;">9:00 - 18:00</p>
+                <p>Четверг</p><p style="color: #333333;">9:00 - 18:00</p>
+                <p>Пятница</p><p style="color: #333333;">9:00 - 18:00</p>
               </div>
 
 
@@ -449,6 +467,249 @@
 
 
         </div>
+        
+        <!--Страница отбеливания зубов-->
+        <div id="whiteTeeth" v-else-if="show == listPage.whiteTeeth" class="white-teeth-page w-h-size-page" key="listPage.whiteTeeth">
+
+        <div class="white-teeth-container">
+
+            <div class="white-teeth-block">
+              <span>ОТБЕЛИВАНИЕ <span class="white-teeth-color-blue">ЗУБОВ</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p>Мы работаем с 2002 года и за эти годы эффективно оказали помощь тысячам пациентов, и достигли успехов во всех напрвлениях современной стоматологии и челюстно-лицевой хирургии.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="white-teeth-imageBlock">
+
+            <div class="bg-color-white-teeth"></div>
+
+            <div class="bg-white-teeth">
+              <img src="img/service.jpg" alt="About Us" class="picture-white-teeth">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        
+        
+        <!--Лечение зубов во сне-->
+        <div id="sleepTeeth" v-else-if="show == listPage.sleepTeeth" class="services-item-page w-h-size-page" key="listPage.sleepTeeth">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>ЛЕЧЕНИЕ ЗУБОВ <span class="services-item-color-blue">ВО СНЕ</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p>На протяжении последних лет мы часто используем в своей практике такой вид анестезии как седация или контролируемый медикаментозный сон. Это состояние при котором пациент (взрослый или ребенок) спит во время лечения. Таким образом полностью устраняется стрессовый фактор и появляется возможность эффективно лечить пациентов с фобиями, повышенным рвотным рефлексом и т.д.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
+         <!--Терапевтическая стоматология-->
+        <div id="terapia" v-else-if="show == listPage.terapia" class="services-item-page w-h-size-page" key="listPage.terapia">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>Терапевтическая <span class="services-item-color-blue">стоматология</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p>Профессиональная гигиена, лечение кариеса зубов, лечение корневых каналов, армирование (укрепление) зубов перед протезированием, художественные реставрации истинно разрушенных зубов проводятся нашими врачами с использованием самых современных материалов и передовых технологий.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
+        
+            <!--Детская стоматология-->
+        <div id="kids" v-else-if="show == listPage.kids" class="services-item-page w-h-size-page" key="listPage.kids">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>Детская <span class="services-item-color-blue">стоматология</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p class="kids-font">В нашей клинике принят системный подход в лечении детей. То есть ребенку проводится полная санация полости рта.Ребенка и его родителей обучают правильной гигиене с последующим контролем. Регулярные плановые осмотры позволяют сократить риск развития кариеса или пролечить его на ранних стадиях, не дожидаясь осложнений, а также минимизировать риск развития нарушений прикуса. Мы лечим детей с самого раннего возраста, с момента прорезывания зубов. А благодаря применению детской седативной анестезии, мы можем лечить детей в самом тяжелом состоянии, а также детей с особенностями развития.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
+        
+         <!--Ортопедическая стоматология-->
+        <div id="orto" v-else-if="show == listPage.orto" class="services-item-page w-h-size-page" key="listPage.orto">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>Ортопедическая <span class="services-item-color-blue">стоматология</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p class="orto-font">При протезировании наших пациентов мы всегда используем индивидуальный подход и самые передовые технологии протезирования: CAD CAM, безметалловая керамика, металлокерамика ведущих мировых производителей позволяет учесть индивидуальные особенности каждого пациента и удовлетворить требования самых взыскательных эстетов. При протезировании на имплантах нашей клиникой используется уникальный абатмент из полиэфир эфиркетона (РЕЕС), изготовленный по технологии купленной у немецкой фирмы Bredent. Этот абатмент обладает рядом преимуществ перед абатментами изготовленными из титана или оксида циркония, что существенно улучшает качество протезирования.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
+        
+        <!--Хирургическая стоматология-->
+        <div id="surgery" v-else-if="show == listPage.surgery" class="services-item-page w-h-size-page" key="listPage.surgery">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>Хирургическая <span class="services-item-color-blue">стоматология</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p>Мы проводим весь спектр хирургических вмешательств в полости рта. Опытный хирург с многолетним стажем проводит хирургическое лечение заболеваний парадонта, постановки дентальных имплантатов различных систем, зубосохраняющие операции, квалифицированное удаление зубов мудрости и т.д.</p>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
+        <!--Челюстно-лицевая хирургия-->
+        <div id="surgeryFace" v-else-if="show == listPage.surgeryFace" class="services-item-page w-h-size-page" key="listPage.surgeryFace">
+
+        <div class="services-item-container">
+
+            <div class="services-item-block">
+              <span>Челюстно-лицевая <span class="services-item-color-blue">хирургия</span>.</span>
+
+              <div class="line-block-services"></div>
+
+              <p class="surgeryFace-font">Высококвалифицированным персоналом нашей клиники проводятся хирургические операции при различных патологиях челюстно-лицевой области и шеи:</p>
+              
+              <ul>
+                  <li>- Хирургическое лечение переломов челюстей и костей лицевого черепа</li>
+                  <li>- Ранения мягких тканей лица и шеи</li>
+                  <li>- Хирургическое лечение воспалительных заболеваний челюстно-лицевой области</li>
+                  <li>- Устранение последствий раннее полученных травм (пластическая хирургия)</li>
+                  <li>- Лечение новообразований, как доброкачественных, так и злокачественных, полости рта и ч.л.о</li>
+              </ul>
+
+            
+            </div>
+            
+          </div>
+         
+         
+          <div class="services-item-imageBlock">
+
+            <div class="bg-color-services-item"></div>
+
+            <div class="bg-services-item ">
+              <img src="img/service.jpg" alt="About Us" class="picture-services-item">
+            </div>
+
+       
+
+          </div>
+
+        </div>
+        <!-- --------------------------- -->
+        
         </transition>
 
       </div>
